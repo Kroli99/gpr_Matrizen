@@ -1,1 +1,8 @@
-d = {{(0, 0): 1, (0, 2): 3, (1, 1): 2, (1, 2): 4}}
+with open("test_matrix_10.txt", "r") as file:
+    matrix = [line.strip().split(" ") for line in file if len(line.split(" ")) > 2]
+#    for line in file:
+#        if len(line.split(" ")) <= 2:
+#            continue
+#        elif len(line.split(" ")) > 2:
+#            matrix.append(line.strip().split(" "))
+    print(matrix)
