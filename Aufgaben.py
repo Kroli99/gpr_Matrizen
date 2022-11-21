@@ -96,8 +96,10 @@ def mat_add(m1, m2):
 
 print(mat_add(a,a))
 
+
 #Multiplikation von Matrizen
-def mat_mul(m1, m2):
-    if (type(m1) == list and type(m2) == list) and len(m1) == len(m2):
-        for i in range(len(m1):
-            for j in range
+#def mat_mul(m1, m2):
+#    if (type(m1) == list and type(m2) == list) and len(m1) == len(m2):
+#        for i in range(len(m1):
+#            for j in range(len(m1[0])):
+#                return False
