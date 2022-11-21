@@ -107,3 +107,4 @@ def mat_mul(m1, m2):
                 row.append(m1[i][j] * m2[i][i])
             result.append(row)
         return result
+
