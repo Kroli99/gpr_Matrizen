@@ -98,8 +98,12 @@ print(mat_add(a,a))
 
 
 #Multiplikation von Matrizen
-#def mat_mul(m1, m2):
-#    if (type(m1) == list and type(m2) == list) and len(m1) == len(m2):
-#        for i in range(len(m1):
-#            for j in range(len(m1[0])):
-#                return False
+def mat_mul(m1, m2):
+    if (type(m1) == list and type(m2) == list) and len(m1) == len(m2):
+        result = []
+        for i in range(len(m1)):
+            row = []
+            for j in range(len(m1[0])):
+                row.append(m1[i][j] * m2[i][i])
+            result.append(row)
+        return result
