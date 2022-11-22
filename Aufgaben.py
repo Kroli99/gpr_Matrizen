@@ -133,8 +133,10 @@ print(timeit.timeit(stmt="mat_add(M, M)", setup="", number=1, globals=globals())
 matrix_file = "test_matrix_10.txt"
 def read_matrix(file_name):
     with open(file_name, "r") as file:
-        matrix = (line.strip().split(" ") for line in file if len(line.split(" ")) > 2)
-        return matrix
+        matrix = [line.strip().split(" ") for line in file if len(line.split(" ")) > 2]
+        matrix_int = [[int(matrix[i][j]) for j in range(len(matrix[0]))] for i in range(len(matrix))]
+        return matrix_int
+
 
 print(timeit.timeit(stmt="mat_add(read_matrix(matrix_file), read_matrix(matrix_file))", setup="", number=1, globals=globals()))
 
